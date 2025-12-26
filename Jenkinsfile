@@ -3,12 +3,6 @@ pipeline {
 
   stages {
 
-    stage('Clone') {
-      steps {
-        checkout scm
-      }
-    }
-
     stage('Build Image') {
       steps {
         sh 'docker build -t miniproject .'
